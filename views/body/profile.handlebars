@@ -1,0 +1,55 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>Profile</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/profile.css" rel="stylesheet">
+</head>
+<body>
+  
+      <div class="container">
+  <div class="navbar-wrapper">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <p class="navbar-brand">Hello!  {{user.username}}</p>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="search">Search for a film</a></li>
+                <li><a href="profile">My Profile</a></li>
+                {{#if user.user_type}}
+                <li><a href="delete">Delete comments</a></li>
+                {{/if}}
+                <li><a href="signin">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <h1>My Profile</h1>
+    <div class="info">
+          <ul>
+          <li>My Username: {{user.username}}</li>
+          <li>My Favorite film: {{#each user.favorite_film}} ●{{this}}{{/each}}</li>
+          <li class="content">My Previous Comments: 
+                {{#user.comments}}
+                <p>Film: {{film_name}}</p> 
+                <p>My comments: {{comment}}</p>
+                <p class="time">Comment time: {{time}}</p>
+                {{/user.comments}}
+          </li>
+          </ul>
+          <a href="/private" class="back">Back to Home Page</a>
+    </div>
+</body>

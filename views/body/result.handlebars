@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Result</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/result.css" rel="stylesheet">
+
+  </head>
+    <h1>Search Result:<h1>
+    <ul class="result">
+        {{#each film}}
+        <li>
+          <form action="/comment" method="post">
+          <input type="hidden" name="index" value="{{no}}">
+          <button type="submit"><img src="image/{{no}}.jpg"/></button>
+          </form>
+        <div>
+          <ul class="info">
+          <li>Name: {{name}}</li>
+          <li>Brief introduction: {{info}}</li>
+          <li>Actor list: {{#each actor_list}} ●{{this}}{{/each}}</li>
+          <li>Director: {{director}}</li>
+          <li>Film type: {{#each film_type}} ●{{this}}{{/each}}</li>
+          <li>Release year: {{release_year}}</li>
+          <li>Score: {{score}}</li>
+          </ul>
+        </div>
+        </li>
+        {{/each}}
+    </ul>
+  </body>

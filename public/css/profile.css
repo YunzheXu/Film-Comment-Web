@@ -1,0 +1,62 @@
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+body {
+    height:100%;
+    margin: 0;  
+    background-image: url(../image/profile.jpg);    
+    background-repeat:no-repeat;  
+        background-position:0% 0%;  
+    background-size:cover;  
+}
+
+h1{
+    color:white;
+    position:absolute;
+    top:12%;
+    left:34%;
+}
+
+.info{
+    color:white;
+    font-size:20px;
+    height:700px;
+    width:500px;
+    position:absolute;
+    top:30%;
+    left:32%;
+}
+
+.back{
+    color:white;
+    font-size:20px;
+    position:relative;
+    left:100%;
+}
+
+.info li{
+    margin-bottom:15px;
+}
+
+.info .time .content{
+    margin-bottom:20px;
+}

@@ -1,0 +1,102 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Comment</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/comment.css" rel="stylesheet">
+
+</head>
+<body>
+ 
+      <div class="container">
+   <div class="navbar-wrapper">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <p class="navbar-brand">Hello!  {{user.username}}</p>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="search">Search for a film</a></li>
+                <li><a href="profile">My Profile</a></li>
+                {{#if user.user_type}}
+                <li><a href="delete">Delete comments</a></li>
+                {{/if}}
+                <li><a href="signin">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <div class="img">
+    <img src="image/{{film.no}}.jpg"></img>
+    </div>
+    <div class="info">
+          <h1>{{film.name}}</h1>
+          <ul>
+          <li>Brief introduction: {{film.info}}</li>
+          <li>Actor list: {{#each film.actor_list}} ●{{this}}{{/each}}</li>
+          <li>Director: {{film.director}}</li>
+          <li>Film type: {{#each film.film_type}} ●{{this}}{{/each}}</li>
+          <li>Release year: {{film.release_year}}</li>
+          <li class="score">Score: {{film.score}}</li>
+          </ul>
+    </div>
+
+<div class="star">
+<form id="star">
+<input type="hidden" name="film_name" value="{{film.name}}"></input>
+<ul>
+  <li><a href="javascript:;">1</a></li>
+  <li><a href="javascript:;">2</a></li>
+  <li><a href="javascript:;">3</a></li>
+  <li><a href="javascript:;">4</a></li>
+  <li><a href="javascript:;">5</a></li>
+ </ul>
+ <button class="button blue" type="submit" >Give a score to this film</button>
+</form>
+</div>
+
+    <div class="add_fav">
+    </form>
+    <form action="/add_to_fav" method="post">
+    <input type="hidden" name="film_name" value="{{film.name}}"></input>
+    <button class="button blue" type="submit" >Add this film into my favorite</button>
+    </form>
+    </div>
+
+    <div class="comments">
+    <div class="other_say">
+    <h2 class="title">Comments: </h2>
+    {{#film.comments}}
+    <p class="username">{{username}} : </p> 
+    <p class="content">{{comment}}</p>
+    <p class="time">{{time}}</p>
+    {{/film.comments}}
+    </div>
+    <div class="comment_button">
+    <form action="/comment_submit" method="post">
+    <textarea class="word" name="content"></textarea>
+    <input type="hidden" name="film_name" value="{{film.name}}"></input>
+    <button class="button blue" type="submit" >Add Comment</button>
+    </form>
+    </div>
+    <a class="back" href="/private">Back to Home Page</a>
+    </div>
+
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/submit.js"></script>
+<script src="js/comment.js"></script>
+
+  

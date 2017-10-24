@@ -1,0 +1,45 @@
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Search</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/search.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+      
+   
+    
+  
+
+			<p>
+        Filter:
+      	</p>
+
+
+    <div class="container">
+
+      <form class="form-signin" action="/result" method="post">
+        <select name="filter">
+        <option>Name</option>
+        <option>Director</option>
+        <option>Actor</option>
+        <option>Film Type</option>
+        <option>Release Year</option>
+        <option>Score</option>
+        </select>
+        <input name="keyword" type="username" id="inputUsername" class="form-control" placeholder="Enter keywords here" required autofocus>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
+      </form>
+    </div>
+    
+
+  </body>
+

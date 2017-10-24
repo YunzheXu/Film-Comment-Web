@@ -1,0 +1,66 @@
+body { 
+    background-image: url(../image/result.jpg);    
+    background-repeat:no-repeat;  
+    background-attachment: fixed;
+    background-size:100%;
+}
+
+h1{
+  color: white;
+}
+
+li{
+  color:white;
+}
+
+form{
+  float:left;
+  height:300px;
+  width:250px;
+}
+
+img{
+  float:left;
+  height:300px;
+  width:250px;
+}
+
+p{
+  color: white;
+  font-size:48px;
+  position: absolute;
+  top: 50%;
+  left:25%;
+}
+
+div{
+    height:400px;
+    width:1200px;
+    padding-left: 1.2em;
+    overflow: hidden;
+}
+
+.info{
+  font-size:20px;
+}
+
+.result{
+  margin-bottom: 20px;
+}
+
+a{
+  font-size: 20px;
+  position: absolute;
+  left:60%;
+  top:70%;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+button{
+  border:none;
+}

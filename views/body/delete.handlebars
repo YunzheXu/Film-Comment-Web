@@ -1,0 +1,32 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Delete Comment</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/delete.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Here are all comments:</h1>
+    <div class="list">
+    {{#each list}}
+    <p >Comment ID:{{_id}} </p> 
+    <p class="username">Film Name:{{film_name}} </p> 
+    <p class="username">Username:{{username}} </p> 
+    <p class="content">Comment:{{comment}}</p>
+    <p class="time">Time:{{time}}</p>
+    {{/each}}
+    <form action="/delete_comment" method="post">
+    <input name="_id" id="delete"></input>
+    <button class="button blue" type="submit" >Delete Comment by specified ID</button>
+    </form>
+    </div>
+    <a class="back" href="/private">Back to Home Page</a>
+
+</body>

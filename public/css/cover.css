@@ -1,0 +1,93 @@
+body {
+  background-image: url(../image/cover.jpg);    
+  background-repeat:no-repeat;  
+  background-size:cover;
+}
+
+div{
+  height:300px;
+  width:700;
+  position:fixed;
+  top:50%;
+  left:50%;
+  margin-left:-350px;
+  margin-top:-150px;
+}
+
+h1{
+  font-size:72px;
+  font-weight:bold;
+  color:white;
+  text-align: center;
+  margin-bottom:50px;
+}
+
+.signin{
+  position:relative;
+  left:20%;
+}
+
+.signup{
+  position:relative;
+  left:30%;
+}
+
+.notice{
+  color:white;
+  font-size:24px;
+  position:relative;
+  top:80%;
+}
+
+.button {
+  height:50px;
+	display: inline-block;
+	zoom: 1; 
+	display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 24px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+
+.blue {
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+.blue:hover {
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+.blue:active {
+	color: #80bed6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+
+
+.bg{background:url(../image/cover.jpg) no-repeat center fixed;background-size:contain}

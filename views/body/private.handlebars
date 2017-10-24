@@ -1,0 +1,179 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>Film Commentary</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/private.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    
+      <div class="container">
+<div class="navbar-wrapper">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <p class="navbar-brand">Hello!  {{user.username}}</p>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="search">Search for a film</a></li>
+                <li><a href="profile">My Profile</a></li>
+                {{#if user.user_type}}
+                <li><a href="delete">Delete comments</a></li>
+                {{/if}}
+                <li><a href="signin">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="first-slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Interstellar</h1>
+              <p>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+              <form action="/comment" method="post">
+              <input type="hidden" name="index" value="5">
+              <button type="submit"><p><a class="btn btn-lg btn-primary">Click to add commentary!</a></p></button>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="second-slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Spider-Man</h1>
+              <p>When bitten by a genetically modified spider, a nerdy, shy, and awkward high school student gains spider-like abilities that he eventually must use to fight evil as a superhero after tragedy befalls his family.</p>
+              <form action="/comment" method="post">
+              <input type="hidden" name="index" value="3">
+              <button type="submit"><p><a class="btn btn-lg btn-primary">Click to add commentary!</a></p></button>
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="third-slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Inception</h1>
+              <p>A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.</p>
+              <form action="/comment" method="post">
+              <input type="hidden" name="index" value="4">
+              <button type="submit"><p><a class="btn btn-lg btn-primary">Click to add commentary!</a></p></button>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">The Avengers</h2>
+          <p class="lead">Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.</p>
+        </div>
+        <div class="col-md-5">
+          <form action="/comment" method="post">
+          <input type="hidden" name="index" value="1">
+          <button type="submit"><img class="featurette-image img-responsive center-block" src="image/private4.jpg"/></button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Harry Potter and the Philosopher's Stone</h2>
+          <p class="lead">Rescued from the outrageous neglect of his aunt and uncle, a young boy with a great destiny proves his worth while attending Hogwarts School of Witchcraft and Wizardry.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <form action="/comment" method="post">
+          <input type="hidden" name="index" value="2">
+          <button type="submit"><img class="featurette-image img-responsive center-block" src="image/private5.jpg"/></button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Pirates of the Caribbean: The Curse of the Black Pearl</h2>
+          <p class="lead">Blacksmith Will Turner teams up with eccentric pirate "Captain" Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.</p>
+        </div>
+        <div class="col-md-5">
+          <form action="/comment" method="post">
+          <input type="hidden" name="index" value="6">
+          <button type="submit"><img class="featurette-image img-responsive center-block" src="image/private6.jpg"/></button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
